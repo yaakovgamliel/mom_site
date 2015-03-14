@@ -1,5 +1,9 @@
 class NormaWeb < Sinatra::Base
 
+  use Rack::Auth::Basic do |username, password|
+  username == 'elwebsitedemimama' and password == 'Pqybn8Yw6Nwct8ND6kpinuzA'
+  end
+
   get '/' do
     erb :index
   end
